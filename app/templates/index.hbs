@@ -2,7 +2,7 @@
   {{#each model as |question|}}
     <div class="well">
        <h3>{{#link-to 'question' question.id}}{{question.subject}}{{/link-to}}</h3>
-       <h5>{{question.user}} </h5>
+       <h5>by {{question.user}} </h5>
     </div>
   {{/each}}
 

@@ -3,8 +3,8 @@
      <h3>{{question.subject}}</h3>
      <h5>{{question.user}} </h5>
      <p>{{question.notes}}</p>
-     <button {{action 'delete' question}} class="btn btn-xs btn-default">Delete</button> <br> <br>
-     {{update-question question=question update="update"}}
+     {{update-question question=question update="update"}} <br>
+     <button {{action 'delete' question}} class="btn btn-xs btn-default">Delete</button>
   </div>
   <hr>
 
@@ -16,6 +16,8 @@
         <strong>{{answer.user}}:</strong>
         <br>
         {{answer.text}}
+        <br><br>
+        <button {{action 'deleteAnswer' answer}} class="btn btn-xs btn-default">Delete Answer</button>
     </div>
   {{/each}}
 
