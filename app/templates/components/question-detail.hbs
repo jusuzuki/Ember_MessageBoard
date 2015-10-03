@@ -7,4 +7,17 @@
      <button {{action 'delete' question}}>Delete</button> <br> <br>
      {{update-question question=question update="update"}}
   </div>
+  <hr>
+
+  {{new-answer saveAnswer="saveAnswer" question=question}}
+
+  <hr>
+  {{#each question.answers as |answer|}}
+    <div class="well">
+        <strong>{{answer.user}}:</strong>
+        <br>
+        {{answer.text}}
+    </div>
+  {{/each}}
+
 </div>
