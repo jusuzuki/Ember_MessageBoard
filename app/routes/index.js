@@ -6,6 +6,11 @@ export default Ember.Route.extend({
   },
 
   actions: {
+    save(params) {
+      var newQuestion = this.store.createRecord('question', params);
+      newQuestion.save();
+      this.transitionTo('index');
+    },
 
     delete(question) {
       if (confirm('Are you sure you want to delete this rental?')) {
