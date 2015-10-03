@@ -1,0 +1,10 @@
+<div class="container">
+  <h1> Welcome to Some Question Board </h1>
+  {{#each model as |question|}}
+    <div class="well">
+       <h3>{{question.user}}</h3>
+       <h5>{{question.subject}} </h5>
+       <p>{{question.notes}}</p>
+    </div>
+  {{/each}}
+</div>
