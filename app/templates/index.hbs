@@ -2,10 +2,8 @@
   <h1> Welcome to Some Question Board </h1>
   {{#each model as |question|}}
     <div class="well">
-       <h3>{{question.subject}}</h3>
+       <h3>{{#link-to 'question' question.id}}{{question.subject}}{{/link-to}}</h3>
        <h5>{{question.user}} </h5>
-       <p>{{question.notes}}</p>
-       <button {{action 'delete' question}}>Delete</button>
     </div>
   {{/each}}
 
