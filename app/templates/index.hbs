@@ -1,5 +1,4 @@
 <div class="container">
-  <h1> Welcome to Some Question Board </h1>
   {{#each model as |question|}}
     <div class="well">
        <h3>{{#link-to 'question' question.id}}{{question.subject}}{{/link-to}}</h3>

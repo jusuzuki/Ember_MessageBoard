@@ -1,10 +1,9 @@
 <div class="container">
-  <h1> Welcome to Some Question Board </h1>
   <div class="well">
      <h3>{{question.subject}}</h3>
      <h5>{{question.user}} </h5>
      <p>{{question.notes}}</p>
-     <button {{action 'delete' question}}>Delete</button> <br> <br>
+     <button {{action 'delete' question}} class="btn btn-xs btn-default">Delete</button> <br> <br>
      {{update-question question=question update="update"}}
   </div>
   <hr>
