@@ -5,6 +5,7 @@
        <h3>{{question.subject}}</h3>
        <h5>{{question.user}} </h5>
        <p>{{question.notes}}</p>
+       <button {{action 'delete' question}}>Delete</button>
     </div>
   {{/each}}
 </div>
