@@ -1,7 +1,7 @@
 <div class="container">
   <div class="well">
      <h3>{{question.subject}}</h3>
-     <h5>{{question.user}} </h5>
+     <h5>by {{question.user}} </h5>
      <p>{{question.notes}}</p>
      {{update-question question=question update="update"}} <br>
      <button {{action 'delete' question}} class="btn btn-xs btn-default">Delete</button>
@@ -13,7 +13,7 @@
   <hr>
   {{#each question.answers as |answer|}}
     <div class="well">
-        <strong>{{answer.user}}:</strong>
+        <strong>{{format-date answer.date_added}} | {{answer.user}} wrote:</strong>
         <br>
         {{answer.text}}
         <br><br>

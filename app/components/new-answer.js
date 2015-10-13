@@ -11,6 +11,7 @@ export default Ember.Component.extend({
       var params = {
         user: this.get('user') ? this.get('user') : "",
         text: this.get('text') ? this.get('text') : "",
+        date_added: Date.now(),
         question: this.get('question') ? this.get('question') : "",
       };
       this.set('addNewAnswer', false);
